@@ -1,72 +1,5 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
-
-    <title>ICS-iLS</title>
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
-	 <link href="/dist/css/signin.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
-
-<script type="text/javascript">
-     
-function toggle() {
- if( document.getElementById("hidethis").style.display=='none' ){
-   document.getElementById("hidethis").style.display = 'table-row'; // set to table-row instead of an empty string
- }else{
-   document.getElementById("hidethis").style.display = 'none';
- }
-}
-</script>
-
-
-    <link href="dist/css/carousel.css" rel="stylesheet">
-  <style type="text/css" id="holderjs-style"></style></head>
-
-
-
-<!-- NAVBAR
-================================================== -->
- <body>
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="dist/images/logowhite.png" height="30px"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Profile</a></li>
-            <li><a href="#about">Search</a></li>
-          </ul>
-		  <form class="navbar-form navbar-right" role="search">
-            <button type="submit" class="btn btn-success">Log out</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-  </div>
-
-    <!--Putting it here for nonsense problem-->
+<?php include 'home_header.php'; ?> 
+   <!--Putting it here for nonsense problem-->
  
     <br />
 	 <div class="search_area">
@@ -137,8 +70,6 @@ function toggle() {
 </table>
  
 
-
-
 <div class="panel-heading"><h3 class="form-signin-heading">Search Results: </h3></div>
 <br />
 <br />
@@ -153,6 +84,7 @@ function toggle() {
                 <th style="width:100px;" abbr="YrofPub" scope="col" title="Year of Publication">Year of Publication</th>
                 <th abbr="Edition" scope="col" title="Edition">Edition</th>
                 <th abbr="Accessibility" scope="col" title="status">Status</th>
+		<th abbr="Accessibility" scope="col" title="status">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -165,6 +97,8 @@ function toggle() {
                 <td>0001</td>
                 <td>Edition 1</td>
                 <td>Available</td>
+			    <!-- First Reserve button as sample for books asking the user to secure some requirements -->
+                <td><input type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#reserve" value="Reserve">
               </tr>
               <tr>
                 <td>L.Mat. ID 2</td>
@@ -174,7 +108,9 @@ function toggle() {
                 <td>Author 2</td>
                 <td>0002</td>
                 <td>Edition 2</td>
-                <td>Borrowed</td>
+                <td>Available</td>
+				<!-- Second Reserve button as sample for books that do not have requirements -->
+                <td><input type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#reserve" value="Reserve">
               </tr>
               <tr>
                 <td>L.Mat. ID 3</td>
@@ -185,27 +121,59 @@ function toggle() {
                 <td>0003</td>
                 <td>Edition 3</td>
                 <td>Borrowed</td>
+                <td><input type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#reserve" value="Reserve">
               </tr>
             </tbody>
 </table>
-<br />
-<br />
  </div>
-	 </div>
+	    
 
+<!-- modal for books with requirements -->
 
+<div class="modal fade" id="reserve" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title" id="myModalLabel">REQUIREMENTS</h3>
+				  </div>
+				  <div class="modal-body">
+				  <b>Please secure the following:&nbsp&nbsp</b>
+				  <br />
+						<li> Consent of the Instructor</li>
+						<li> Consent of the Owner</li>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+					 </form>
+				  </div>
+				</div>
+			  </div>
+			  
+</div>	
 
+<!-- modal for books without requirements -->
 
+<div class="modal fade" id="reserve1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title" id="myModalLabel">Hi there!</h3>
+				  </div>
+				  <div class="modal-body">
+				  <b>You chose to reserve this book.</b>
+				  <br />
+				  <b>Do you wish to continue?</b>
+				  </div>
+				  <div class="modal-footer">
+					<button class="btn btn-primary" type="submit">Cancel</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+					
+				  </div>
+				</div>
+			  </div>
+			  
+</div>
 
-<table id="hidethis" style="display:none;">
-
-      <tr><td>Hello World</td></tr>
-
-</table>
-
-
-
-
-
-
-</body></html>
+<?php include 'footer.php'; ?>

@@ -22,9 +22,20 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+           
+      function toggle() {
+       if( document.getElementById("hidethis").style.display=='none' ){
+         document.getElementById("hidethis").style.display = 'table-row'; // set to table-row instead of an empty string
+       }else{
+         document.getElementById("hidethis").style.display = 'none';
+       }
+      }
+      </script>
+
     <!-- Custom styles for this template -->
     <link href="dist/css/carousel.css" rel="stylesheet">
-    <link href="/dist/css/signin.css" rel="stylesheet">
+    <link href="dist/css/signin.css" rel="stylesheet">
   <style type="text/css" id="holderjs-style"></style></head>
 <!-- NAVBAR
 ================================================== -->

@@ -1,11 +1,17 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  
 }
 
 .signin {
   max-width: 400px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.search_area {
+  max-width: 900px;
   padding: 15px;
   margin: 0 auto;
 }
@@ -15,6 +21,9 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
+
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;

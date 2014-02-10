@@ -147,7 +147,7 @@
 					var x = document.getElementById('re_password');
 					var y = document.getElementById('update_password');
 					var z = document.getElementById('set_password');
-					var a = document.getElementById('cancel');
+					var a = document.getElementById('cancel_pword');
 					
 					if (w.value!=x.value) {
 					alert('Please retype your password.');
@@ -270,7 +270,7 @@
                 <td>Author 1</td>
                 <td>0001</td>
                 <td>Edition 1</td>
-                <td><input type="submit" value="Cancel"/></td>
+                <td><input type="submit" value="Cancel" data-toggle="modal" data-target="#cancel_dialog"/></td>
               </tr>
 			  
               <tr>
@@ -281,7 +281,7 @@
                 <td>Author 2</td>
                 <td>0002</td>
                 <td>Edition 2</td>
-                <td><input type="submit" value="Cancel"/></td>
+                <td><input type="submit" value="Cancel" data-toggle="modal" data-target="#cancel_dialog"/></td>
               </tr>
 			  
               <tr>
@@ -292,12 +292,57 @@
                 <td>Author 3</td>
                 <td>0003</td>
                 <td>Edition 3</td>
-                <td><input type="submit" value="Cancel"/></td>
+                <td><input type="submit" value="Cancel" data-toggle="modal" data-target="#cancel_dialog"/></td>
               </tr>
 			  
 			</table>
 			
 			</p>
+			
+			<!-- Modal window for cancelling material reservations -->
+			
+			<div class="modal fade" id="cancel_dialog" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title" id="myModalLabel">Cancel Reservation</h3>
+				  </div>
+				  <div class="modal-body">
+				      <form class="form-signin" role="form">
+						<h4 class="form-signin-heading">You chose to cancel your reservation for this material. Do you wish to continue?</h4>				
+				  </div>
+				  <div class="modal-footer">
+					<input href="#no" data-dismiss="modal" onclick="" type="submit" value="No" class="btn btn-primary"/>
+					<input href="#yes" data-dismiss="modal" onclick="" type="submit" value="Yes" class="btn btn-primary" data-toggle="modal" data-target="#cancel_dialog"/>
+					 </form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<!-- Confirm cancelling the reservation -->
+			
+			<div class="modal fade" id="cancel_dialog" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title" id="myModalLabel">Reservation Cancelled</h3>
+				  </div>
+				  <div class="modal-body">
+				      <form class="form-signin" role="form">
+						<h4 class="form-signin-heading">The library material reservation has been successfully cancelled.</h4>						
+				  </div>
+				  <div class="modal-footer">
+					<input href="#ok" data-dismiss="modal" onclick="" type="submit" value="Done" class="btn btn-primary"/>
+					 </form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			
 		</div>
 		</div>
 

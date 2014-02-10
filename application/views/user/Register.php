@@ -1,67 +1,47 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
-
-    <title>ICS-iLS</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
-    <link href="dist/css/carousel.css" rel="stylesheet">
-  <style type="text/css" id="holderjs-style"></style></head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="dist/images/logowhite.png" height="30px"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Search</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
-  </div>
-
-
-
+<?php include 'home_header.php'; ?>   
     <div class="container">
+	
+	<div id="register-cont">
 
-      <form class="form-signin" role="form" method="post" action="<?php echo $PHP_SELF;?>">
+      <form class="form-signin" role="form" method="post"">
         <h2 class="form-signin-heading">Please Register</h2>
-	<input type="text" class="form-control" placeholder="Student Number: (xxxx-xxxxx)" required autofocus>
-        <input type="text" class="form-control" placeholder="Username:" required autofocus>
-	<input type="text" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password:" required>
-        <input type="password" class="form-control" placeholder="Re-type Password:" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+		<b>Full Name: </b> <input type="text" class="form-control" placeholder="First Name" required autofocus>
+		<input type="text" class="form-control" placeholder="Middle Name" required autofocus>
+		<input type="text" class="form-control" placeholder="Last Name" required autofocus>
+		<br>
+		<input type="text" class="form-control" placeholder="Employee/Student Number" required autofocus>
+		<input type="text" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Re-type Password" required>
+       
+		<br>
+		<label for="college">College:</label>
+		<select id="college" class="form-control small">
+			<option value="CA">CA</option>
+			<option value="CAS">CAS</option>
+			<option value="CDC">CDC</option>
+			<option value="CEAT">CEAT</option>
+			<option value="CEM">CEM</option>
+			<option value="CHE">CHE</option>
+			<option value="CFNR">CFNR</option>
+			<option value="CVM">CVM</option>
+			<option value="CPAF">CPAF</option>
+			<option value="SESAM">SESAM</option>
+			<option value="SESAM">GS</option>
+		</select>
+		 <input type="password" class="form-control" placeholder="Course" required>
+		 <br>
+		<b>Sex:&nbsp&nbsp</b>
+		<label class="checkbox-inline"><input type="radio" id="letter" value="1" name="sex"> Male</label>
+		<label class="checkbox-inline"><input type="radio" id="letter" value="2" name="sex"> Female</label>
+		
+		
+		<br>
+		<br>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
       </form>
+	  
+	  </div> <!--cont-->
 
     </div> <!-- /container -->
 
@@ -75,20 +55,4 @@
     <br />
     <br />
     <br />
-   
-  
-
-   <!-- FOOTER -->
-  <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-      </footer>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="dist/js/jquery-1.js"></script>
-    <script src="dist/js/bootstrap.js"></script>
-    <script src="dist/js/holder.js"></script>
-  
-
-</body></html>
+<?php include 'footer.php'; ?>   

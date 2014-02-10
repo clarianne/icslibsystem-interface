@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'index';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

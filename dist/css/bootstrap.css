@@ -1,3 +1,4 @@
+
 /*!
  * Bootstrap v3.0.3 (http://getbootstrap.com)
  * Copyright 2013 Twitter, Inc.
@@ -2353,6 +2354,53 @@ fieldset[disabled] .btn-default.active {
 
 .btn-default .badge {
   color: #ffffff;
+  background-color: #fff;
+}
+
+.btn-message{
+   color: #000080;
+  background-color: #000080;
+  border-color: #000080;
+}
+
+
+.btn-message:hover,
+.btn-message:focus,
+.btn-message:active,
+.btn-message.active,
+.open .dropdown-toggle.btn-message {
+ color: #000080;
+  background-color: #000080;
+  border-color: #000080;
+}
+
+.btn-message:active,
+.btn-mesage.active,
+.open .dropdown-toggle.btn-message {
+  background-image: none;
+}
+
+.btn-message.disabled,
+.btn-message[disabled],
+fieldset[disabled] .btn-message,
+.btn-message.disabled:hover,
+.btn-message[disabled]:hover,
+fieldset[disabled] .btn-message:hover,
+.btn-message.disabled:focus,
+.btn-message[disabled]:focus,
+fieldset[disabled] .btn-message:focus,
+.btn-message.disabled:active,
+.btn-message[disabled]:active,
+fieldset[disabled] .btn-message:active,
+.btn-message.disabled.active,
+.btn-message[disabled].active,
+fieldset[disabled] .btn-message.active {
+  background-color: #000080;
+  border-color: #000080;
+}
+
+.btn-message .badge {
+  color: #428bca;
   background-color: #fff;
 }
 
